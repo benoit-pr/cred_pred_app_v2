@@ -1,15 +1,30 @@
-README
+# Credit Score Dashboard with Streamlit
 
-This is a streamlit app that produces a dashboard indicating a credit score.
+## Overview
 
-The input is a .json file, with specific fields. Lots of example in test_data folder. 
-If info is missing, the app is robust to NaNs. Note that prediction won't be as accurate.
+This Streamlit app provides an interactive dashboard for indicating a credit score.
 
-The prediction is produced via a pretrained xgboost classifier model.
+## Input
 
-The dashboard is interactive. It shows the key information of a customer, the default probability, and whether or not the credit is given. 
-It also shows the main factors contributing to decision, based on Shapley values.
+- **File Type**: `.json`
+- **Details**: The JSON file should include specific fields. Examples can be found in the `test_data` folder.
+- **Handling Missing Data**: The app is robust to NaNs. However, note that predictions may be less accurate if information is missing.
 
-It is possible to change the information to update the prediction.
+## Model
 
-To make a prediction, the model uses historical banking data, available in folder hist_data.
+- **Type**: Pretrained XGBoost Classifier
+- **Repository**: [GitHub - credit_score](https://github.com/benoit-pr/credit_score)
+
+## Features
+
+- **Interactive Dashboard**:
+  - Displays key customer information.
+  - Shows the default probability and whether credit is granted.
+  - Highlights the main factors contributing to the decision using Shapley values.
+
+- **Dynamic Updates**:
+  - Users can modify the input information to update predictions.
+
+## Data
+
+- **Historical Data**: The model uses historical banking data, which has been precomputed and is available in the `hist_data` folder.
